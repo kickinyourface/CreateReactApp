@@ -1,0 +1,97 @@
+/* App.css */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.filter:after {
+  background-color: rgba(0, 0, 0, 0.4);
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.card-title {
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 500;
+  font-size: 16px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.fixed-size-img {
+  width: 170px;
+  height: 250px; /* Ajusta la altura según tus necesidades */
+  object-fit: cover;
+}
+
+.fixed-size-card {
+  width: 170px; /* Misma anchura que la imagen */
+  height: 400px; /* Ajusta la altura total del card para incluir el botón */
+  margin: auto; /* Centra el card horizontalmente */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.centered-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.centered-form .form-group {
+  width: 100%;
+  max-width: 500px; /* Máximo ancho del input */
+}
+
+.text-center {
+  text-align: center;
+}
+
+.custom-background {
+  background-size: cover;
+  background-position: center;
+  height: 50vh; /* Ajusta esta altura según tus necesidades */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px; /* Añade algo de relleno si es necesario */
+}
+
+.white-text {
+  color: white;
+}
+
+.centered-form {
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.error-message {
+  color: red;
+}
+
+.results-row {
+  background-color: white; /* Fondo blanco para la fila de resultados */
+}
