@@ -38,6 +38,7 @@ def search_books():
             'maxResults': max_results,
             'startIndex': start_index
         })
+        response.headers['Access-Control-Allow-Origin'] = 'http://35.185.77.184:3000'  # Allow specific origin
         response.raise_for_status()  # Esto lanzará una excepción si la respuesta no es 200
         data = response.json()
         return jsonify(data)
