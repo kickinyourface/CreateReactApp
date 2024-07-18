@@ -1,13 +1,20 @@
 # Usa una imagen base de Node.js
 FROM node:14
 
+# Actualiza npm a una versión específica compatible con Node.js 14
+RUN npm install -g npm@6
+
 # Establece el directorio de trabajo en el contenedor
 WORKDIR /app
 
 # Copia los archivos package.json y package-lock.json al contenedor
 COPY package*.json ./
 
-# Instala las dependencias
+# Configura npm para manejar tiempos de espera largos
+RUN npm config set fetch-retry-mintimeout 20000
+RUN npm config set fetch-retry-maxtimeout 120000
+
+# Instala todas las dependencias
 RUN npm install
 
 # Copia todo el código de la aplicación al contenedor
